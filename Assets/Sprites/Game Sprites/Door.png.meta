@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 13aea926d52ee314f8265655ecfaa2eb
-timeCreated: 1491404215
+timeCreated: 1491579184
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -99,7 +99,7 @@ TextureImporter:
         width: 177
         height: 255
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -107,12 +107,12 @@ TextureImporter:
       name: Door_1
       rect:
         serializedVersion: 2
-        x: 177
+        x: 178
         y: 0
-        width: 177
+        width: 176
         height: 255
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -122,10 +122,10 @@ TextureImporter:
         serializedVersion: 2
         x: 354
         y: 0
-        width: 177
+        width: 176
         height: 255
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -133,12 +133,12 @@ TextureImporter:
       name: Door_3
       rect:
         serializedVersion: 2
-        x: 531
+        x: 532
         y: 0
-        width: 177
+        width: 175
         height: 255
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -151,7 +151,7 @@ TextureImporter:
         width: 177
         height: 255
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
