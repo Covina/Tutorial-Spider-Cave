@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: f0defa0822f473146b602629817c2573
-timeCreated: 1491404094
+timeCreated: 1491627631
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -97,7 +97,7 @@ TextureImporter:
         width: 145
         height: 50
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -107,10 +107,10 @@ TextureImporter:
         serializedVersion: 2
         x: 150
         y: 0
-        width: 146
-        height: 26
+        width: 145
+        height: 50
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -118,12 +118,12 @@ TextureImporter:
       name: Bouncer_2
       rect:
         serializedVersion: 2
-        x: 297
+        x: 295
         y: 0
         width: 145
-        height: 14
+        height: 50
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0

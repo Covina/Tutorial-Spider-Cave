@@ -145,6 +145,18 @@ public class Player : MonoBehaviour {
 	}
 
 
+	public void BouncePlayer (float force)
+	{
 
+
+		if (grounded) {
+
+			grounded = false;
+
+			rigidBody.AddForce(new Vector2(0, force) );
+
+		}
+
+	}
 
 }
