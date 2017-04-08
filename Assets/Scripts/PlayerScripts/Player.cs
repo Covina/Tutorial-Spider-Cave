@@ -5,9 +5,9 @@ using UnityEngine;
 public class Player : MonoBehaviour {
 
 
-	public float moveForce = 20f;
-	public float jumpForce = 700f;
-	public float maxVelocity = 4f;
+	private float moveForce = 20f;
+	private float jumpForce = 800f;
+	private float maxVelocity = 4f;
 
 	// are we standing on the ground
 	private bool grounded = true;

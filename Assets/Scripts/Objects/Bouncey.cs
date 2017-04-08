@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bouncey : MonoBehaviour {
 
 
-	public float force = 500f;
+	private float force = 1000f;
 
 	private Animator animator;
 

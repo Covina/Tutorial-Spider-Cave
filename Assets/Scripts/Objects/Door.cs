@@ -28,15 +28,14 @@ public class Door : MonoBehaviour {
 	}
 
 
-//	// Use this for initialization
-//	void Start () {
-//		
-//	}
-//	
-//	// Update is called once per frame
-//	void Update () {
-//		
-//	}
+
+	// Use this for initialization
+	void Start () {
+
+		Debug.Log("Collectables to earn: " + collectablesCount);
+						
+	}
+
 
 	// Create singleton
 	void MakeInstance ()
