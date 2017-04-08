@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour {
 
@@ -16,11 +17,16 @@ public class Player : MonoBehaviour {
 	private Animator animator;
 
 
+	private bool moveLeft, moveRight;
+
+
 	void Awake()
 	{
 		rigidBody = GetComponent<Rigidbody2D>();
 
 		animator = GetComponent<Animator>();
+
+		GameObject.Find("Jump Button").GetComponent<Button>().onClick.AddListener( () => Jump() );
 	}
 
 
@@ -34,10 +40,79 @@ public class Player : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
 		// walk the player
-		PlayerWalkKeyboard ();
+		//PlayerWalkKeyboard ();
+
+		PlayerWalkJoystick();
 	}
 
 
+
+	// MOBILE
+	void PlayerWalkJoystick ()
+	{
+		float forceX = 0f;
+		float velocity = Mathf.Abs (rigidBody.velocity.x);
+
+		// MOVE RIGHT
+		if (moveRight) {
+
+			// 
+			if (velocity < maxVelocity) {
+
+				if (grounded) {
+					forceX = moveForce;
+				} else {
+					// can influence movement while in the air
+					forceX = moveForce * 1.1f;
+				}
+
+			}
+
+
+			// face to the right
+			Vector3 scale = transform.localScale;
+			scale.x = 1f;
+			transform.localScale = scale;
+
+			// play walk animation
+			animator.SetBool ("IsWalking", true);
+
+		} else if (moveLeft) {
+
+		// MOVE LEFT
+
+			if (velocity < maxVelocity) {
+
+				if (grounded) {
+					forceX = -moveForce;
+				} else {
+					// can influence movement while in the air
+					forceX = -moveForce * 1.1f;
+				}
+
+			}
+
+			// face to the right
+			Vector3 scale = transform.localScale;
+			scale.x = -1f;
+			transform.localScale = scale;
+
+			// play walk animation
+			animator.SetBool ("IsWalking", true);
+
+		} else {
+
+			animator.SetBool("IsWalking", false);
+
+		}
+
+		// apply the movement
+		rigidBody.AddForce(new Vector2(forceX, 0f) );
+
+	}
+
+
+	// KEYBOARD
 	void PlayerWalkKeyboard ()
 	{
 
@@ -158,5 +233,38 @@ public class Player : MonoBehaviour {
 		}
 
 	}
+
+
+
+	public void SetMoveLeft (bool moveLeft)
+	{
+		this.moveLeft = moveLeft;
+		this.moveRight = !moveLeft;
+	}
+
+
+	public void StopMoving()
+	{
+		this.moveLeft = false;
+		this.moveRight = false;
+	}
+
+	// jump for mobile controls
+	public void Jump()
+	{
+		if(grounded) {
+
+			// set we're not grounded
+			grounded = false;
+
+			// apply the movement
+			rigidBody.AddForce(new Vector2(0, jumpForce) );
+
+		}
+
+
+
+	}
+
 
 }
