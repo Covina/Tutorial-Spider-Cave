@@ -46,6 +46,7 @@ public class LevelTimer : MonoBehaviour {
 
 		} else {
 			// kill the player, time is out!
+			GetComponent<GameplayController>().PlayerDied();
 			Destroy(player);
 		}
 

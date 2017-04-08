@@ -65,6 +65,7 @@ public class SpiderJumper : MonoBehaviour {
 
 			// destroy player
 			Destroy(collider.gameObject);
+			GameObject.Find("Gameplay Controller").GetComponent<GameplayController>().PlayerDied();
 
 		}
 
